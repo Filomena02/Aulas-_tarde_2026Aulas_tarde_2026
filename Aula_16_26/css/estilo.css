@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
+*{
+	margin:0px;
+	padding:0px;
+}
+section{
+	display:flex;
+	justify-content: center;
+}
+section.topo{
+	width: 100vw;
+	height: 10vh;
+	border-bottom: 1px solid gray;
+}
+#logo{
+	width: 10%;
+	height: 100%;
+}
+#logo img{
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height:auto;
+
+}
+#menu{
+	width:90%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction:column;
+	algin-itens: center;
+	text-align: center;
+}
+	ul.nav{
+		margin: 0px;
+		padding: 0px;
+		list-style-type: none;
+		width: 90%;
+		height: 30%;
+	}
+ul.nav li ol{
+	display:none;
+	list-style-type: none;
+	floot:none;
+	width:100%;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index:1;
+}
+ul.nav li{
+	position: relative;
+	width: 13%;
+	margin-right: 6%;	
+	background-color: #D9753B;
+	border: 1px solid gray;
+	cursor: pointer;
+	color: white;
+	font-family: "Imperial Script", cursive;
+	font-size:2vw;
+}
+	ul.nav li ol li{
+		float: none;
+		width: 100%;
+		position: relative;
+		top:0;
+		left: 0;
+		broder-top:0px;
+		height: auto;
+		background-color: white;
+		border-botom: 1px solid purple;
+
+}
+ul.nav li:hover ol{
+	display: block;
+}
+
+
