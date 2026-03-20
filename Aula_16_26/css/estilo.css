@@ -5,7 +5,7 @@
 }
 body{
 	background-image: url(../img/kukis.jpg);
-	background-size: cover;
+	background-size: 100vw 100vh;
 }
 body.outro{
 	background-image: none;
@@ -89,9 +89,8 @@ ul.nav li ol li a{
 	color:orange;
 	font-family: "Playfair Display", serif;
 }
-
 section.principal{
-	windth: 99vw;
+	width: 99vw;
 	height: 89vh;
 }
 section.principal iframe{

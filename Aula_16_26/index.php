@@ -14,8 +14,13 @@
 						target="janela">soma</a></li>
 					<li><a href="produto.php"
 						target="janela">produto</a></li>
-					<li><a href="salário.php"
-						target="janela">salário</a></li>
+						<li><a href="salario.php"
+						target="janela">salario</a></li>
+						<li><a href="taxista.php"
+						target="janela">Taxista</a></li>
+						<li><a href="idade.php"
+						target="janela">Idade</a></li>
+				
 					</ol>
 				</li>
 
