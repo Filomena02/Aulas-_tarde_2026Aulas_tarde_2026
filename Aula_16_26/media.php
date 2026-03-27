@@ -1,5 +1,5 @@
 <?php require_once 'cabecalho.php'; ?>
-<form action="media.php" method="POST">
+<form action="media.php" method="GET">
 <h1>Clacular media</h1>
 	<p>Digite o nome do aluno:</p>
 	<p><input type="text" name="nome" size="30"maxlength="30"required></p>
@@ -21,17 +21,15 @@
 		$media=($nota1+$nota2+$nota3)/3;
 
 		echo "<section class='resposta'>";
-		if($media>=6){
-			echo "<p> Parabéns $nome, você está APROVADO! MEDIA FINAL: $media </P>";
+		if($media>=60){
+			echo "<p> Parabéns $nome, você está APROVADO! Media Final: $media </p>";
 
 		}else{
-			ECHO "<P> Que Pena! Você está REPROVADO! MEDIA FINAL: $media </P>";
-		}
-		echo "</section>";
+			echo "<p> Que Pena! Você está REPROVADO! Media Final: $media </p>";
+		}elese{
 
 		}
-		?>
-	</body>
-	</html>
+		}
+}
 		
 	
