@@ -39,7 +39,23 @@ public function setNivel($nivel)
 public function getNivel()
 {
 return $this->nivel;
-}
+} 
+	public function logar()
+	{
+		setcookie("administrador",$this->cod_adm);
+		setcookie("nivel",$this->nivel);
+	}
+
+	public function deslogar()
+	{
+		setcookie("administrador","");
+		setcookie("nivel","");
+	}
+	public function criptografarSenha()
+	{
+	$this->senha=password_hash($this->senha,PASSWORD_DEFAULT);
 
 }
+}
+
 ?>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 14-Abr-2026 às 20:42
+-- Generation Time: 14-Abr-2026 às 20:41
 -- Versão do servidor: 5.7.17
 -- PHP Version: 5.6.30
 
@@ -32,18 +32,18 @@ USE `bancoz`;
 --
 
 CREATE TABLE `administrador` (
-  `login` varchar(70) DEFAULT NULL,
-  `Nivel` int(11) DEFAULT NULL,
+  `cod_adm` int(11) NOT NULL,
+  `login` varchar(20) DEFAULT NULL,
   `senha` varchar(70) DEFAULT NULL,
-  `cod_adm` int(11) NOT NULL
+  `nivel` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `administrador`
 --
 
-INSERT INTO `administrador` (`login`, `Nivel`, `senha`, `cod_adm`) VALUES
-('admin', 1, '$2y$10$gGOVtjvg1mrZsdf0DYmF7.sjXnmImLsli7ap0ca2enR/jla00HMra', 1);
+INSERT INTO `administrador` (`cod_adm`, `login`, `senha`, `nivel`) VALUES
+(1, 'admin', '$2y$10$l1fu3A40kYUIwul1bg4NtO1GEUOhJwBUttzH9z10DInQV/iegrEsG', 1);
 
 -- --------------------------------------------------------
 
@@ -52,11 +52,11 @@ INSERT INTO `administrador` (`login`, `Nivel`, `senha`, `cod_adm`) VALUES
 --
 
 CREATE TABLE `fabricante` (
+  `cod_fab` int(11) NOT NULL,
+  `nome` varchar(30) DEFAULT NULL,
+  `endereco` varchar(70) DEFAULT NULL,
   `telefone` varchar(14) DEFAULT NULL,
-  `Cidade` varchar(30) DEFAULT NULL,
-  `Nome` varchar(30) DEFAULT NULL,
-  `cod_fab` varchar(30) NOT NULL,
-  `Endereco` varchar(70) DEFAULT NULL,
+  `cidade` varchar(30) DEFAULT NULL,
   `cod_adm` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
@@ -67,13 +67,13 @@ CREATE TABLE `fabricante` (
 --
 
 CREATE TABLE `produto` (
-  `descricao` text,
-  `valor` decimal(6,2) DEFAULT NULL,
-  `quantidade` int(11) DEFAULT NULL,
   `cod_pro` int(11) NOT NULL,
   `nome` varchar(30) DEFAULT NULL,
+  `descricao` text,
+  `quantidade` int(11) DEFAULT NULL,
+  `valor` decimal(6,2) DEFAULT NULL,
   `foto` blob,
-  `cod_fab` varchar(30) DEFAULT NULL,
+  `cod_fab` int(11) DEFAULT NULL,
   `cod_adm` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 

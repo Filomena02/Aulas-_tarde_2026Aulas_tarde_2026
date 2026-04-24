@@ -4,14 +4,14 @@
 	</div>
 	<div id="menu">
 		<ul class="nav">
-			<?php if(!isset($_COOKIE['variable']['administrador'])){//não esta logado?>
+			<?php if(!isset($_COOKIE['administrador'])||$_COOKIE['administrador']=='deleted'){ ?>
 				<li><a href="login.php"
 					>Login</a></li>
 					<li><a href="sobre.php"
 						>sobre</a></li>
 						<?php
 		}else{//esta logado
-			if(!isset($_COOKIE['nivel'])&& $_COOKIE['nivel']==1){
+			if(isset($_COOKIE['nivel'])&& $_COOKIE['nivel']==1){
 				?>
 				<li> Administradores
 					<ol>
@@ -33,6 +33,8 @@
 										>Listar</a></li>
 										<li><a href="buscarfab.php"
 										>Buscar</a></li>
+									</ol>
+								</li>
 
                               <li>Produto
 								<ol>
@@ -45,6 +47,7 @@
 
 									</ol>
 								</li>
+								<li><a href="logoff.php">Sair</a></li>
 					<?php }  ?>
 					</ul>
 
