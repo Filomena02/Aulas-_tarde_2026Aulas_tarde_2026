@@ -155,3 +155,42 @@ ul.nav li:hover ol{
 	width: 100px;
 	height: 100px;
 }
+table{
+	width:90vw;
+	margin-left: 10vw;
+	height: auto;
+	margin-top:10vh;
+	border:var(--borda);
+	font-family: var(--letra);
+
+}
+
+table th{
+	background-color: var(--cor_fundo);
+	color: var(--cor_letra);
+
+}
+table th{
+	border:var(--borda);
+	text-algin: center;
+
+}
+a.botao_pag{
+	bachground-color:var(--cor_botao);
+	color: var(--cor_letra);
+    width:3%;
+    padding:1%;
+    border-radius: var(--arredondamento);
+    text-decoration: none;
+    texte-algin: center;
+    margin-top: 2%;
+
+}
+span.numero{
+	margin-top:2%;
+	font-size:2.3vw;
+	border: var(--borda);
+	border-radius: 36px;
+	width:2%;
+	text-align: center;
+}

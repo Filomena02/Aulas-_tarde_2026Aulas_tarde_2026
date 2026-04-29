@@ -27,20 +27,42 @@ class Fabricante{
 	 return $this->nome;
 	}
 
-	public function setEndereco($endereco){
-	  
-	  $this->endereco=$endereco;
+	public function setEndereco($endereco)
+	{
+	 	  $this->endereco=$endereco;
+	}
+	public function getEndereco()
+	{
+	 return $this->endereco;
 	}
 
-	 public function getEndereco()
-	 {
-	 	return $this->endereco;
-
+	public function setTelefone($telefone)
+	{
+	 	  $this->telefone=$telefone;
 	}
-	 	
+	public function getTelefone()
+	{
+	 return $this->telefone;
+	}
+
+	public function setCidade($cidade)
+	{
+	 	  $this->cidade=$cidade;
+	}
+	public function getCidade()
+	{
+	 return $this->cidade;
+	}
 	
-	
-	
+	public function setCodAdm($cod_adm)
+	{
+	 	  $this->cod_adm=$cod_adm;
+	}
+	public function getCodAdm()
+	{
+	 return $this->cod_adm;
+	}
+		
 }
 
 ?>
