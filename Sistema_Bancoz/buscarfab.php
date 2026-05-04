@@ -51,10 +51,10 @@ require_once'menu.php';
 
 									while ($linha=$consulta->fetch_assoc()){
 										$fabricante->setCodFab($linha['cod_fab']);
-										$fabricante->setNome($linha['Nome']);
-										$fabricante->setEndereco($linha['Endereco']);
+										$fabricante->setNome($linha['nome']);
+										$fabricante->setEndereco($linha['endereco']);
 										$fabricante->setTelefone($linha['telefone']);
-										$fabricante->setCidade($linha['Cidade']);
+										$fabricante->setCidade($linha['cidade']);
 										$fabricante->setCodAdm($linha['cod_adm']);
 
 
@@ -67,8 +67,8 @@ require_once'menu.php';
 										echo "<td>".$fabricante->getCodAdm()."</td>";
 										echo"<td><a href='alterarfab.php?cod_fab=".
 											$fabricante->getCodFab()."'>Sim</a></td>";
-										echo"<td><a href='alterarfab.php?cod_fab=".
-											$fabricante->getCodAdm()."'>Sim</a></td>";
+										echo"<td><a href='excluirfab.php?cod_fab=".
+											$fabricante->getCodFab()."'>Sim</a></td>";
 										echo "</tr>";
 									} 
 
